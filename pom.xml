@@ -101,4 +101,10 @@
             </plugin>
         </plugins>
     </build>
+    <scm>
+        <connection>scm:git@github.com:zhi35/spring-bean-call.git</connection>
+        <developerConnection>scm:git:https://github.com/zhi35/spring-bean-call.git</developerConnection>
+        <url>https://github.com/zhi35/spring-bean-call</url>
+        <tag>1.0.0</tag>
+    </scm>
 </project>
