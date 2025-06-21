@@ -74,9 +74,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.9.1</version>
-                <configuration>
-                    <excludePackageNames>com.kuajingnet.springbean.call.nanohttpd</excludePackageNames>
-                </configuration>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -99,8 +96,33 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.5.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <checksums>required</checksums>
+                    <deploymentName>spring-bean-call</deploymentName>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://github.com/zhi35/spring-bean-call</url>
+            <distribution>repo,manual</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>revinbian</name>
+            <email>revinbian@gmail.com</email>
+            <url>kuajingnet.com</url>
+        </developer>
+    </developers>
     <scm>
         <connection>scm:git@github.com:zhi35/spring-bean-call.git</connection>
         <developerConnection>scm:git:https://github.com/zhi35/spring-bean-call.git</developerConnection>
